@@ -18,6 +18,10 @@ def test_instance(Self):
     self.image.save()
     self.assertTrue(isinstance(self.Image.Image))
 
+def test_save_method(self):
+    self.image.save_image()
+    images=Image.objects.all()
+    self.assertTrue(len(images)>0)
 
 
 
