@@ -47,5 +47,23 @@
                                                 </div>
                                                 <h6>{{img.upload_date | timesince}} ago</h6>
                                                 <hr>
+                                                {% for comment in comments %}
+                                                {% if img.id == comment.image.id %}
+                                                <p><b>{{comment.user}}</b>  {{comment.comments}}</p>
+                                                {% endif %}
+                                                {% endfor %}
+                                        </div>
+                                        <div class="card-footer">
+                                                        <p><a href="{% url 'comment' pk=img.id %}">Add comment</a></p>
+                                                </div>
+                                        </div>
+                                        {% endif %}
+                                        <br><br>
+                                        {% endfor %}
+                                </div>
+                                <div class="col-md-2 col-lg-2 col-xs-1 col-sm-1"></div>
+                </div>
+                
+        </div>
 
                         {% endblock %}
