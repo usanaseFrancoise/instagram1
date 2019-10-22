@@ -12,10 +12,10 @@ urlpatterns=[
     url(r'^upload_image/',views.upload,name='upload'),
     url(r'^edit/',views.edit,name='edit'),
     url(r'^settings/',views.settings_func,name='settings'),
-    url(r'^comment/',views.new_comment,name='comment'),
-    url(r'^view_profile/',views.view_your_profile,name='yourprofile'),
+    url(r'^comment/(?P<pk>\d+)',views.new_comment,name='comment'),
+    url(r'^view_profile/(?P<pk>\d+)',views.view_your_profile,name='yourprofile'),
     # url(r'^follow/',views.views.profile,name='profile'),
-    url(r'^like/',views.like,name='like')
+    url(r'^like/(?P<operation>.+)/(?P<pk>\d+)',views.like,name='like')
     ,]
 
 if settings.DEBUG:

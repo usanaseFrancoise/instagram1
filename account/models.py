@@ -36,7 +36,7 @@ class Image(models.Model):
     image =models.ImageField(upload_to='uploads/',blank=True,null=True)
     caption= models.CharField(max_length =60)
     upload_date= models.DateTimeField(auto_now_add=True)
-    user=models.ForeignKey(Profile,on_delete=models.CASCADE)
+    user=models.ForeignKey(User,on_delete=models.CASCADE)
     likes =models.PositiveIntegerField(default=0)
 
 
