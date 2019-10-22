@@ -34,5 +34,10 @@
                                                         <a href="{% url 'comment' pk=img.id %}" style="color:inherit;"><i class="far fa-comment fa-2x ml-4"></i></a>
                                                         <a href="#" style="color:inherit;"><i class="far fa-bookmark fa-2x float-right mr-4"></i></a>
                                         </div>
+                                        <br>
+                                              {% if img.likes >= 1 %}
+                                        <div class="row">
+                                                <h5 style="padding:8px; color:red;"><b>{{img.likes}} likes</b></h5>
+                                        </div>
 
                         {% endblock %}
