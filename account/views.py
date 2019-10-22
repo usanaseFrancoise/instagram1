@@ -141,7 +141,7 @@ def view_your_profile(request,pk):
     current_user = request.user
     image = Image.get_images()
     profile = Profile.get_profile()
-    comment = Comment.get_comment()
+    comment = Comment.get_comments()
     user = get_object_or_404(User, pk=pk)
     return render(request,'profile/view.html',{"user":current_user,
                                                "images":image,
