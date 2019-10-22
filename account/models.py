@@ -16,6 +16,8 @@ class Profile(models.Model):
 
     def delete_profile(self):
         self.delete()
+    
+    
 
     @classmethod
     def get_profile(cls):

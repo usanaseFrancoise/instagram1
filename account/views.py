@@ -106,7 +106,7 @@ def search_results(request):
     if 'username' in request.GET and request.GET["username"]:
         search_term = request.GET.get("username")
         searched_name = Profile.find_profile(search_term)
-        message = search_term
+        message = f"{search_term}"
 
         return render(request,'search.html',{"message":message,
                                              "profiles":profile,

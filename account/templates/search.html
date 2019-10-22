@@ -13,8 +13,8 @@
         {% endif %}
     </div>
     <div class="row">
-        {% if username %}
-            {% for user in username %}
+        {% if user %}
+            {% for user in users %}
             <img src="{{user.profilePic.url}}" alt="" class="img-fluid" style="border-radius:50%">
             <h3 class="mt-5">
                     <a href="{% url 'yourprofile' pk=user.user.id %}" class="btn btn-primary mt-3 ml-5">{{user.user.username}}</a>
