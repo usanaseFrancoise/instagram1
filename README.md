@@ -5,11 +5,11 @@
 # Description 
 
 This is a Instagram  IS Built in django application  the user will be able:
-### create profile
-### post a picture and hve a  description of it
-### to like a picture
-### to comment on certain picture
-## to search
+#### create profile
+#### post a picture and hve a  description of it
+#### to like a picture
+#### to comment on certain picture
+#### to search
 
 ## you can view the application site at :Heroku
 
